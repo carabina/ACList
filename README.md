@@ -9,6 +9,28 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```
+
+[self loadData:^(BLList * _Nonnull list) {
+        //列表刷新配置
+        list.loadType = BLLoadTypeAll;
+        list.listView = self.tableView;
+        [list start];
+
+        //请求数据
+        void (^block)(void) = ^(void) {
+            if (list.loadStatus == BLLoadStatusNew) [self.datas removeAllObjects];
+            for (int i=0; i<20; i++) {
+                NSString *obj = [NSString stringWithFormat:@"index:%lu", (unsigned long)list.range.location*list.range.length+i+1];
+                [self.datas addObject:obj];
+            }
+            [list finish];
+        };
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
+    }]
+
+```
+
 ## Requirements
 
 ## Installation
@@ -27,3 +49,5 @@ ablettx, ablettchen@gmail.com
 ## License
 
 BLList is available under the MIT license. See the LICENSE file for more info.
+
+
