@@ -6,6 +6,5 @@ target 'BLList_Example' do
   target 'BLList_Tests' do
     inherit! :search_paths
 
-    
   end
 end
