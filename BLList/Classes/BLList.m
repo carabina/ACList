@@ -112,7 +112,7 @@
     
     if (self.loadStatus == BLLoadStatusNew) {
         if (self.listController.datas.count == 0) {
-#warning TOFO
+
             //设置空白页
         }else {
             if (self.loadType == BLLoadTypeAll) {
