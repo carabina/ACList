@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BLList'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BLList.'
+  s.summary          = '快速配置下拉刷新、上拉加载，空白页.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

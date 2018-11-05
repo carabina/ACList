@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ablettx;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 37Z4FSY7RD;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -499,6 +502,7 @@
 			baseConfigurationReference = 749E0DC146C22EB277EB29A0 /* Pods-BLList_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37Z4FSY7RD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLList/BLList-Prefix.pch";
 				INFOPLIST_FILE = "BLList/BLList-Info.plist";
@@ -514,6 +518,7 @@
 			baseConfigurationReference = E18B5AC5BDB074E385A07999 /* Pods-BLList_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 37Z4FSY7RD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLList/BLList-Prefix.pch";
 				INFOPLIST_FILE = "BLList/BLList-Info.plist";
