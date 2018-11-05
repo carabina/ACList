@@ -14,7 +14,6 @@
 
 @end
 
-
 @interface BLList ()
 @property (strong, nonatomic) BLRefreshHeader *header;
 @property (strong, nonatomic) BLRefreshAutoFooter *footer;
@@ -113,6 +112,9 @@
     if (self.loadStatus == BLLoadStatusNew) {
         if (self.listController.datas.count == 0) {
             //设置空白页
+            
+            //待完善...
+            
         }else {
             if (self.loadType == BLLoadTypeAll) {
                 if (self.listController.datas.count >= dataLength) {

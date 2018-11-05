@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLList'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '快速配置下拉刷新、空白页，适用于 UITableView、UICollectionView、UIScrollView.'
   s.homepage         = 'https://github.com/ablettx/BLList'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
