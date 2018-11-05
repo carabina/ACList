@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLList'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '快速配置下拉刷新、空白页，适用于 UITableView、UICollectionView、UIScrollView.'
 
 # This description is used to generate tags and improve search results.
