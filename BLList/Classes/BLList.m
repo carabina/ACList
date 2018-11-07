@@ -8,7 +8,7 @@
 
 #import "BLList.h"
 #import "BLRefreshHeader.h"
-#import "BLRefreshAutoFooter.h"
+#import "BLRefreshFooter.h"
 
 @implementation BLBlank
 
@@ -16,7 +16,7 @@
 
 @interface BLList ()
 @property (strong, nonatomic) BLRefreshHeader *header;
-@property (strong, nonatomic) BLRefreshAutoFooter *footer;
+@property (strong, nonatomic) BLRefreshFooter *footer;
 @end
 
 @implementation BLList
@@ -60,9 +60,9 @@
     return _header;
 }
 
-- (BLRefreshAutoFooter *)footer {
+- (BLRefreshFooter *)footer {
     if (!_footer) {
-        _footer = [BLRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+        _footer = [BLRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
         // 设置文字
         [_footer setTitle:@"上拉加载更多" forState:MJRefreshStateIdle];
         [_footer setTitle:@"加载中..." forState:MJRefreshStateRefreshing];

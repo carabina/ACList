@@ -25,21 +25,35 @@
     
     //加载数据
     [self loadData:^(BLList * _Nonnull list) {
-        //列表刷新配置
+        
+        //1. 列表刷新配置
         list.loadType = BLLoadTypeAll;
         list.listView = self.tableView;
         [list start];
 
-        //请求数据
-        void (^block)(void) = ^(void) {
+        //2. 请求数据
+        
+        //请求参数
+        NSDictionary *parameters = @{
+                                     @"offset"  : @(list.range.location),
+                                     @"number"  : @(list.range.length),
+                                     };
+
+        NSLog(@"parameters:%@", parameters);
+
+        void (^requestFinish)(void) = ^(void) {
+            //当前加载状态为下拉刷新时移除旧数据
             if (list.loadStatus == BLLoadStatusNew) [self.datas removeAllObjects];
+            //3. 添加数据
             for (int i=0; i<20; i++) {
                 NSString *obj = [NSString stringWithFormat:@"index:%lu", (unsigned long)list.range.location*list.range.length+i+1];
                 [self.datas addObject:obj];
             }
+            //4. 刷新
             [list finish];
         };
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), requestFinish);
     }];
     
 }

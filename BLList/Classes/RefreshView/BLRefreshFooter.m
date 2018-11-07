@@ -1,18 +1,18 @@
 //
-//  BLRefreshAutoFooter.m
+//  BLRefreshFooter.m
 //  Beile
 //
 //  Created by ablett on 2018/11/4.
 //  Copyright © 2018 ablett. All rights reserved.
 //
 
-#import "BLRefreshAutoFooter.h"
+#import "BLRefreshFooter.h"
 
-@interface BLRefreshAutoFooter ()
+@interface BLRefreshFooter ()
 @property (weak, nonatomic) UIActivityIndicatorView *loadingView;
 @end
 
-@implementation BLRefreshAutoFooter
+@implementation BLRefreshFooter
 
 #pragma mark - 懒加载子控件
 

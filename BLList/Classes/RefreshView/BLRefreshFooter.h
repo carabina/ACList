@@ -1,5 +1,5 @@
 //
-//  BLRefreshAutoFooter.h
+//  BLRefreshFooter.h
 //  Beile
 //
 //  Created by ablett on 2018/11/4.
@@ -8,7 +8,7 @@
 
 #import "MJRefreshAutoStateFooter.h"
 
-@interface BLRefreshAutoFooter : MJRefreshAutoStateFooter
+@interface BLRefreshFooter : MJRefreshAutoStateFooter
 /** 菊花的样式 */
 @property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
 @end
