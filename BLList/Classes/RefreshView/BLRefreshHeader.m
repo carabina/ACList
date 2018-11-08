@@ -1,9 +1,11 @@
 //
 //  BLRefreshHeader.m
-//  Beile
-//s
-//  Created by ablett on 2018/11/4.
+//  BLList
+//  https://github.com/ablettx/BLList
+//
+//  Created by ablett on 2018/11/5.
 //  Copyright © 2018 ablett. All rights reserved.
+//  Licence: MIT-Licence
 //
 
 #import "BLRefreshHeader.h"

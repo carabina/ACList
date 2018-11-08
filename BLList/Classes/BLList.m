@@ -1,22 +1,22 @@
 //
 //  BLList.m
-//  Beile
+//  BLList
+//  https://github.com/ablettx/BLList
 //
-//  Created by ablett on 2018/11/4.
+//  Created by ablett on 2018/11/5.
 //  Copyright © 2018 ablett. All rights reserved.
 //
 
 #import "BLList.h"
 #import "BLRefreshHeader.h"
 #import "BLRefreshFooter.h"
+#import "UIScrollView+BLBlank.h"
 
-@implementation BLBlank
-
-@end
 
 @interface BLList ()
 @property (strong, nonatomic) BLRefreshHeader *header;
 @property (strong, nonatomic) BLRefreshFooter *footer;
+@property (strong, nonatomic) NSArray <BLBlank *>*blanks;
 @end
 
 @implementation BLList
@@ -28,6 +28,7 @@
     self.loadStatus = BLLoadStatusIdle;
     self.loadType = BLLoadTypeNone;
     self.range = NSMakeRange(0, dataLength);
+    
     
     return self;
 }
@@ -81,11 +82,17 @@
 #pragma mark - privite
 
 - (void)loadNew {
-    if (self.listController) [self.listController loadNew];
+    SEL selector = NSSelectorFromString(@"loadNew");
+    if (self.listController && [self.listController respondsToSelector:selector]) {
+        [self.listController performSelector:selector withObject:nil afterDelay:0.0f];
+    }
 }
 
 - (void)loadMore {
-    if (self.listController) [self.listController loadMore];
+    SEL selector = NSSelectorFromString(@"loadMore");
+    if (self.listController && [self.listController respondsToSelector:selector]) {
+        [self.listController performSelector:selector withObject:nil afterDelay:0.0f];
+    }
 }
 
 #pragma mark - public
@@ -110,14 +117,17 @@
     [self.listView.mj_header endRefreshing];
     
     if (self.loadStatus == BLLoadStatusNew) {
-        if (self.listController.datas.count == 0) {
+        if (self.listView.bl_itemsCount == 0) {
             //设置空白页
             
             //待完善...
             
+            //self.blank =
+            
+            
         }else {
             if (self.loadType == BLLoadTypeAll) {
-                if (self.listController.datas.count >= dataLength) {
+                if (self.listView.bl_itemsCount >= dataLength) {
                     self.listView.mj_footer = self.footer;
                 }else {
                     self.listView.mj_footer = nil;

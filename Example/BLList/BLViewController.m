@@ -11,6 +11,7 @@
 
 @interface BLViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *datas;
 @end
 
 @implementation BLViewController
@@ -22,6 +23,8 @@
     
     [self.view addSubview:self.tableView];
     self.tableView.frame = self.view.bounds;
+    
+    self.datas = [NSMutableArray array];
     
     //加载数据
     [self loadData:^(BLList * _Nonnull list) {

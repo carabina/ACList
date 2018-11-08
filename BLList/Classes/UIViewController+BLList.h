@@ -1,12 +1,11 @@
 //
 //  UIViewController+BLList.h
-//  Beile
+//  BLList
+//  https://github.com/ablettx/BLList
 //
 //  Created by ablett on 2018/11/5.
 //  Copyright © 2018 ablett. All rights reserved.
 //
-
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,13 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (BLList)
 
 /** 数据 */
-@property (strong, nonatomic) NSMutableArray *datas;
-
-/** 下拉刷新 */
-- (void)loadNew;
-
-/** 上拉加载 */
-- (void)loadMore;
+//@property (strong, nonatomic) NSMutableArray *datas;
 
 /**
  数据加载

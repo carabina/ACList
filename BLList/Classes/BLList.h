@@ -1,8 +1,9 @@
 //
 //  BLList.h
-//  Beile
+//  BLList
+//  https://github.com/ablettx/BLList
 //
-//  Created by ablett on 2018/11/4.
+//  Created by ablett on 2018/11/5.
 //  Copyright © 2018 ablett. All rights reserved.
 //
 
@@ -11,21 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, BLBlankType) {
-    BLBlankTypeFailure = 1,     //加载失败
-    BLBlankTypeNoData,          //暂无数据
-    BLBlankTypeNoNetwork,       //暂无网络
-};
-
 static int const dataLength = 20;
-
-@interface BLBlank : NSObject
-
-@property (copy, nonatomic) NSString *icon;         //图标
-@property (copy, nonatomic) NSString *title;        //标题
-@property (assign, nonatomic) BLBlankType type;     //空白页类型
-
-@end
 
 typedef NS_OPTIONS(NSUInteger, BLLoadType) {
     BLLoadTypeNone = 0,                             //无
@@ -40,10 +27,9 @@ typedef NS_ENUM(NSUInteger, BLLoadStatus) {
     BLLoadStatusMore,                               //上拉加载
 };
 
-@class BLListVC;
+/** 快速配置下拉刷新、上拉加载、空白页，适用于 UITableView、UICollectionView、UIScrollView */
 
-/** 配置下拉刷新、上拉加载、空白页。适用于 UITableView, UICollectionView, UIScrollView */
-
+@class BLBlank;
 @interface BLList : NSObject
 
 /** 空白页 */

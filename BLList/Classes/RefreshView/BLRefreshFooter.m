@@ -1,9 +1,11 @@
 //
 //  BLRefreshFooter.m
-//  Beile
+//  BLList
+//  https://github.com/ablettx/BLList
 //
-//  Created by ablett on 2018/11/4.
+//  Created by ablett on 2018/11/5.
 //  Copyright © 2018 ablett. All rights reserved.
+//  Licence: MIT-Licence
 //
 
 #import "BLRefreshFooter.h"

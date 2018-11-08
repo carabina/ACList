@@ -1,0 +1,18 @@
+{
+    "list": [{
+        "type"  : "1",
+        "image" : "blank_failure",
+        "title" : "加载失败"
+    },
+    {
+        "type"  : "2",
+        "image" : "blank_nodata",
+        "title" : "暂无数据"
+    },
+    {
+        "type"  : "3",
+        "image" : "blank_nonetwork",
+        "title" : "暂无网络"
+    }
+    ]
+}
