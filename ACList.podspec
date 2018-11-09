@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
     s.name             = 'ACList'
-    s.version          = '0.1.6'
+    s.version          = '0.1.7'
     s.summary          = '快速配置下拉刷新、上拉加载、空白页，适用于 UITableView、UICollectionView、UIScrollView'
     s.homepage         = 'https://github.com/ablettchen/ACList'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
