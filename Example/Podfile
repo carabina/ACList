@@ -1,12 +1,11 @@
-platform :ios, :deployment_target => '8.0'
-inhibit_all_warnings!
 use_frameworks!
 
-target 'BLList_Example' do
-  pod 'BLList', :path => '../'
+target 'ACList_Example' do
+  pod 'ACList', :path => '../'
 
-  target 'BLList_Tests' do
+  target 'ACList_Tests' do
     inherit! :search_paths
 
+    
   end
 end
